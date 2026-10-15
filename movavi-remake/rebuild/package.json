@@ -1,0 +1,33 @@
+{
+  "name": "movavi-remake",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Desktop video editor with a native FFmpeg engine, rebuilt from reverse-engineering notes on Movavi Video Editor",
+  "main": "dist/main/main.js",
+  "scripts": {
+    "build:main": "node scripts/build-main.mjs",
+    "build:renderer": "vite build",
+    "build": "npm run build:main && npm run build:renderer",
+    "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.renderer.json",
+    "start": "electron .",
+    "test": "tsx test/engine.test.ts",
+    "e2e": "tsx test/e2e.ts"
+  },
+  "dependencies": {
+    "ffmpeg-static": "^5.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "^4.7.0",
+    "electron": "^38.8.6",
+    "esbuild": "^0.28.2",
+    "playwright-core": "^1.64.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3",
+    "vite": "^6.4.4"
+  }
+}

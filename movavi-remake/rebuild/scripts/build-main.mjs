@@ -1,0 +1,6 @@
+import { build } from "esbuild";
+
+const common = { bundle: true, platform: "node", target: "node22", format: "cjs", sourcemap: true, logLevel: "warning" };
+await build({ ...common, entryPoints: ["src/main/main.ts"], outfile: "dist/main/main.js", external: ["electron", "ffmpeg-static"] });
+await build({ ...common, entryPoints: ["src/preload/preload.ts"], outfile: "dist/preload/preload.js", external: ["electron"] });
+console.log("main + preload built");

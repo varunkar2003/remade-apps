@@ -1,0 +1,12 @@
+{
+  "name": "teams-rebuild",
+  "private": true,
+  "workspaces": ["server", "client"],
+  "scripts": {
+    "dev": "npm --workspace server run dev & npm --workspace client run dev",
+    "server": "npm --workspace server run dev",
+    "client": "npm --workspace client run dev",
+    "build": "npm --workspace client run build",
+    "test": "npm --workspace server run test"
+  }
+}

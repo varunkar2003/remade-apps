@@ -1,0 +1,12 @@
+# third-party code captured for analysis — never published
+**/target/
+# build output, deps, local data
+node_modules/
+dist/
+**/server/data/
+*.db
+*.db-wal
+*.db-shm
+*.log
+# empty placeholder
+minecraft-remake/
